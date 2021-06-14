@@ -1,0 +1,36 @@
+html{
+    background-color: #d9dde3;
+}
+
+#container{
+    background-color: #79AEB2;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    margin-top: -150px;
+    left: 50%;
+    margin-left: -150px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#linkContainer{
+    width: 180px;
+    height: 160px;
+    position: absolute;
+    top: 50%;
+    margin-top: -80px;
+    left: 50%;
+    margin-left: -90px;
+}
+
+#linkContainer a{
+    margin: 10px;
+    outline: none !important; /*no border around button after clicking*/
+}
+
+#linkContainer a img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 100px;
+    height: 100px;
+}

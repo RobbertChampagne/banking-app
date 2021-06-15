@@ -1,0 +1,80 @@
+html{
+    background-color: #d9dde3;
+}
+
+#container{
+    background-color: #79AEB2;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 50%;
+    margin-top: -200px;
+    left: 50%;
+    margin-left: -200px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#logoutLink{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+#logoutLink p{
+    margin: 0px 0px 0px -3px;
+    text-align: center;
+    color: black;
+    display: none;
+}
+
+#logoutLink:hover #logoutP{
+    display: block;
+}
+
+#linkContainer{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    margin-top: -150px;
+    left: 50%;
+    margin-left: -150px;
+    display: flex;
+}
+
+.newAndExistLinkContainers{
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 28%;
+    margin-left: 5%;
+}
+
+#linkContainer a{
+    margin: 15px;
+    outline: none !important; /*no border around button after clicking*/
+    text-decoration: none;
+    color: black;
+}
+
+#linkContainer a img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 100px;
+    height: 100px;   
+}
+
+#linkContainer p{
+    margin: 0px 10px 0px 10px;
+    text-align: center;
+    display: none;
+}
+
+#newClientImg:hover + #newClientP{
+    display: block;
+}
+
+#existClientImg:hover + #existClientP{
+    display: block;
+    font-size: 14px;
+}

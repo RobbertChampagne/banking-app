@@ -1,0 +1,54 @@
+html{
+    background-color: #d9dde3;
+}
+
+#container{
+    background-color: #79AEB2;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 50%;
+    margin-top: -200px;
+    left: 50%;
+    margin-left: -200px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#backLink{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#backImg{
+    width: 50px;
+}
+
+#tableContainer{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 53%;
+    margin-top: -150px;
+    left: 50%;
+    margin-left: -150px;
+    display: flex;
+    overflow: auto; /*scroll*/
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 5px;
+}
+
+th {
+  text-align: left;
+}
+

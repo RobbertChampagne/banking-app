@@ -18,10 +18,19 @@ html{
     position: absolute;
     margin-top: 10px;
     margin-left: 10px;
+    z-index: 1; /*tableTitle = width 100% -> over icon -> else can't click*/
 }
 
 #backImg{
-    width: 50px;
+    width: 50px;  
+}
+
+#tableTitle{
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    width: 100%;
+    text-align: center;
 }
 
 #tableContainer{
@@ -52,3 +61,6 @@ th {
   text-align: left;
 }
 
+td{
+    text-align: center;
+}

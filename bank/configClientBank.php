@@ -1,7 +1,8 @@
 <?php
 
-    include('serverClientTableBank.php');
-    
+    //include('serverClientTableBank.php');
+    session_start();
+
     //IF NOT LOGGED IN YET
     if(!isset($_SESSION['name'])){
         $_SESSION['msg'] = "You must log in first to view this page"; //message not logged in 
@@ -27,8 +28,10 @@
         header("location: indexBank.php");
     }
 
-    //get so this page knows what table was clicked
+    $client = $_GET["client"]; //array send as string
     $table = $_GET["table"];
+    $clientArray = explode(',', $client); //to array
+    print_r(json_encode($clientArray));
 
 ?>
 
@@ -40,23 +43,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="clientTableBankStyle.css">
-    <script type="text/javascript" src="clientTableBankScript.js"></script>
+    <script type="text/javascript" src="configClientBankScript.js"></script>
 
-    <title>Client Table</title>
+    <title><?php echo $clientArray[1] ?></title>
 </head>
 <body>
 
-    <div id="container" value=<?php echo $table ?>>
+    <div id="container">
 
-        <a id="backLink" href="homeBank.php">
+        <a id="backLink" value=<?php echo $table ?>>
             <img id="backImg" src="..\images\icons\back.svg" alt="">
         </a>
 
-        <p id=tableTitle></p>
-
-        <div id="tableContainer">
+        <div id="tableContainer" value=<?php echo json_encode($clientArray); ?>> <!---->
             <table id="clientTable"></table>
         </div>
+
     </div>
 
 </body>

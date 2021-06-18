@@ -43,6 +43,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="clientTableBankStyle.css">
+    <link rel="stylesheet" type="text/css" href="ConfigClientBankStyle.css">
     <script type="text/javascript" src="configClientBankScript.js"></script>
 
     <title><?php echo $clientArray[1] ?></title>

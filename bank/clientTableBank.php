@@ -28,7 +28,7 @@
     }
 
     //get so this page knows what table was clicked
-    $table = $_GET["table"];
+    $_SESSION['table'] = $_GET["table"];
 
 ?>
 
@@ -46,7 +46,7 @@
 </head>
 <body>
 
-    <div id="container" value=<?php echo $table ?>>
+    <div id="container" value=<?php echo $_SESSION['table']?>>
 
         <a id="backLink" href="homeBank.php">
             <img id="backImg" src="..\images\icons\back.svg" alt="">

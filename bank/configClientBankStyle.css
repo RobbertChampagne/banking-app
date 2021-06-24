@@ -1,6 +1,7 @@
 /*uses clientTableBankStyle.css*/
 
-#saveButton{
-    width: 50px;
-    border-radius: 50%;
+
+
+#hiddenSubmitButton{
+    display: none;
 }

@@ -1,6 +1,5 @@
 <?php
 
-    //include('serverClientTableBank.php');
     session_start();
 
     //IF NOT LOGGED IN YET
@@ -28,10 +27,15 @@
         header("location: indexBank.php");
     }
 
-    $client = $_GET["client"]; //array send as string
-    $table = $_GET["table"];
+    $client = $_GET["client"]; //array send as string from clientTableBankScript.js
     $clientArray = explode(',', $client); //to array
+
+    $_SESSION['client'] = $clientArray;
+
     print_r(json_encode($clientArray));
+
+    //include('serverConfigClientBank.php');
+
 
 ?>
 
@@ -46,18 +50,21 @@
     <link rel="stylesheet" type="text/css" href="ConfigClientBankStyle.css">
     <script type="text/javascript" src="configClientBankScript.js"></script>
 
-    <title><?php echo $clientArray[1] ?></title>
+
+    <title><?php echo $_SESSION['client'][1] ?></title> <!--$clientArray[1]-->
 </head>
 <body>
 
     <div id="container">
 
-        <a id="backLink" value=<?php echo $table ?>>
+        <a id="backLink" value=<?php echo $_SESSION['table'] ?>> <!--$table-->
             <img id="backImg" src="..\images\icons\back.svg" alt="">
         </a>
 
-        <div id="tableContainer" value=<?php echo json_encode($clientArray); ?>> <!---->
-            <table id="clientTable"></table>
+        <div id="tableContainer" value=<?php echo json_encode($_SESSION['client']); ?>> <!--$clientArray-->
+            <form action="serverConfigClientBank.php" method="POST" id="configClientForm">    
+                <table id="clientTable"></table>
+            </form>
         </div>
 
     </div>

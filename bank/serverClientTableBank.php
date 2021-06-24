@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+ 
 //CONNECT TO DB
 $dbPassword = "robbertadmin";
 $dbUserName = "admin_robbert";
@@ -39,5 +39,7 @@ if (isset($_POST['getClients'])) {
     $clientsToShow = json_encode($clientsToShow); //to json
     echo $clientsToShow; 
 }
+
+$_SESSION['clients'] = $clientsToShow;
 
 ?>

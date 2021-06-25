@@ -28,7 +28,9 @@
     }
 
     //get so this page knows what table was clicked
-    $_SESSION['table'] = $_GET["table"];
+    if(empty($_SESSION['table'])){
+        $_SESSION['table'] = $_GET["table"]; //coming from homeBank.php
+    }//else coming from configClientBank.php (back)
 
 ?>
 

@@ -19,20 +19,19 @@ if($connection->connect_errno) //when there is no connection
 
 if(isset($_POST['updatedClient'])) {
 
-    /*$step_one = $_POST['step_one'];
-    $step_two = $_POST['step_two'];
-    $step_three = $_POST['step_three'];
-    $step_four = $_POST['step_four'];
-    $approved = $_POST['approved'];*/
     $clientArr = $_SESSION['client'];
+    print_r($_SESSION['client']);
 
     for ($i = 0; $i < count($clientArr); $i++){ // is checked?
         
         if($i === 5){//one
             if(empty($_POST['step_one'])){
                 $clientArr[$i] = 0;
+
             }else{
                 $clientArr[$i] = 1;
+                echo "one = " + $_POST['step_one'];
+
             }
 
         }else if($i === 6){//two
@@ -40,6 +39,7 @@ if(isset($_POST['updatedClient'])) {
                 $clientArr[$i] = 0;
             }else{
                 $clientArr[$i] = 1;
+                echo "two = " + $_POST['step_two'];
             }
 
         }else if($i === 7){//three
@@ -66,12 +66,8 @@ if(isset($_POST['updatedClient'])) {
     }
 
 
-    print_r($clientArr);
-
-
-/*
     //VALIDATION
-    foreach($client as $attribute){
+    foreach($clientArr as $attribute){
         $attribute = filter_var($attribute, FILTER_SANITIZE_SPECIAL_CHARS); //This filter is used to escape "<>& and characters with ASCII value below 32
     }
 
@@ -79,11 +75,16 @@ if(isset($_POST['updatedClient'])) {
     //[5,"bert","bert@gmail.com",0,"car",0,0,0,0,0]
     $query = "UPDATE bankclients SET step_one=?, step_two=?, step_three=?, step_four=?, approved=? WHERE id=?";
     $result = $connection->prepare($query); //prepares query
-    $result->bind_param("iiiiii", $client[5], $client[6], $client[7], $client[8], $client[9], $client[0] ); //add type to var
+    $result->bind_param("iiiiii", $clientArr[5], $clientArr[6], $clientArr[7], $clientArr[8], $clientArr[9], $clientArr[0] ); //add type to var
     $result->execute(); //uses query on DB  
     $result->store_result(); //save result
     $result->close();
-    */
+    
+    $_SESSION['client'] = $clientArr; //save new client in session
+    print_r($_SESSION['client']);
+
+    //header("location: clientTableBank.php");
+
 }
 
 

@@ -32,11 +32,6 @@
 
     $_SESSION['client'] = $clientArray;
 
-    print_r(json_encode($clientArray));
-
-    //include('serverConfigClientBank.php');
-
-
 ?>
 
 

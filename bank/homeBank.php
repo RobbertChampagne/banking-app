@@ -2,6 +2,10 @@
 
     session_start();
     
+    if(isset($_SESSION['table'])){
+        unset($_SESSION['table']); //reset var when comming back from chosen table
+    }
+
     //IF NOT LOGGED IN YET
     if(!isset($_SESSION['name'])){
         $_SESSION['msg'] = "You must log in first to view this page"; //message not logged in 

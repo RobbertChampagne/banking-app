@@ -105,32 +105,42 @@ function loaded() {
         //TABLE CLIENTS
         //$client = [$clientId, $name, $email, $new_client, $loan_type, $step_one, $step_two, $step_three, $step_four, $approved];
 
-        if (value === "newClients" && client[3] === "1") {
+        if (value === "newClients" && client[3] === "1") { //1=newclient
         let tr = document.createElement("tr");
 
         for (i = 0; i < 5; i++) {
             let td = document.createElement("td");
 
             if (i === 0) {
-            td.textContent = client[i];
+                td.textContent = client[i];
 
             } else if (i === 1) {
-            td.textContent = client[i];
+                td.textContent = client[i];
 
             } else if (i === 2) {
-            td.textContent = client[i];
+                td.textContent = client[i];
 
             } else if (i === 3) {
-            td.textContent = client[4];
+                td.textContent = client[4];
 
             } else if (i === 4) {
-            let link = document.createElement("a");
-            link.setAttribute("href","configClientBank.php?client=" + client + "&&table=" + value);
-            let img = document.createElement("img");
-            img.src = "../images/icons/save.svg";
-            img.setAttribute("width", "50px");
-            link.appendChild(img);
-            td.appendChild(link);
+
+                let imgInput = document.createElement("input");
+                imgInput.setAttribute("type", "image");
+                imgInput.setAttribute("src", "../images/icons/save.svg");
+                imgInput.setAttribute("width", "50px");
+                imgInput.addEventListener("click", saveConfig);
+
+                td.appendChild(imgInput);
+
+                //input type img can't pass value in form..
+                let submitInput = document.createElement("input");
+                submitInput.setAttribute("type", "text");
+                submitInput.setAttribute("id", "hiddenSubmitButton");
+                submitInput.setAttribute("name", "confirmClient");
+                submitInput.setAttribute("value", "confirmClient");
+
+                td.appendChild(submitInput);
             }
 
             tr.appendChild(td);

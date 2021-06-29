@@ -28,6 +28,8 @@
                 <br><br>
                 <button type="submit" name="loginbutton">Login</button>
             </form>
+            <p id="or">or</p>
+            <a id="register" href="registerBankClient.php"><button>Register</button></a>
 
             <?php include('..\error.php'); ?> <!--include errors page (shows errors)-->
 

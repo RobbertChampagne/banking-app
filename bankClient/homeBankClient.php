@@ -1,15 +1,11 @@
 <?php
 
     session_start();
-    /*
-    if(isset($_SESSION['table'])){
-        unset($_SESSION['table']); //reset var when comming back from chosen table
-    }*/
 
     //IF NOT LOGGED IN YET
     if(!isset($_SESSION['name'])){
         $_SESSION['msg'] = "You must log in first to view this page"; //message not logged in 
-        header("location: indexBank.php");
+        header("location: indexBankClient.php");
     }
 
     //LOGGING OUT
@@ -27,8 +23,10 @@
         }
         
         session_destroy();
-        header("location: indexBank.php");
+        header("location: indexBankClient.php");
     }
+
+    
 ?>
 
 
@@ -41,7 +39,7 @@
     <script type="text/javascript" src="homeBankClientScript.js"></script>
     <link rel="stylesheet" type="text/css" href="homeBankClientStyle.css" >
 
-    <title>Home</title>
+    <title><?php echo $_SESSION['client'][1] ?></title>
 </head>
 <body>
     
@@ -55,7 +53,10 @@
         <div id="infoContainer">
             <p id="nameClient"></p>
             <img id="loanTypeImg" src="" alt="">
-            <progress id="progressBar" value="50" max="100"> 80% </progress>
+            <br>
+            <progress id="progressBar" value="0" max="100"> 0% </progress>
+            <br>
+            <div id="checkboxContainer"></div>
         </div>
     </div>
 

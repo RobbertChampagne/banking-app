@@ -31,3 +31,38 @@ html{
 #logoutLink:hover #logoutP{
     display: block;
 }
+
+#nameClient{
+    position: relative;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+#loanTypeImg{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 100px;
+    width: 100px;
+    margin-bottom: 10px;
+    margin-left: 150px;
+}
+
+#progressBar{
+    width: 300px;
+    margin-left: 50px;
+}
+
+#checkboxContainer{
+    margin-left: 5vw;
+}
+
+#checkboxContainer input{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 10px;
+}
+
+#checkboxContainer label{
+    font-size: 15px;
+}
+

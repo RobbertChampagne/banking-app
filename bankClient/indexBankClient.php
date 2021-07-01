@@ -1,4 +1,4 @@
-<?php include('serverBankClient.php') ?> <!--include PHP page-->
+<?php include('serverBankClient.php'); ?> <!--include PHP page-->
 
 <!DOCTYPE html>
 <html lang="en">

@@ -64,3 +64,36 @@ th {
 td{
     text-align: center;
 }
+
+
+@media (max-width:400px)  { /*mobile*/
+
+    #container{
+        width: 350px;
+        left: 50%;
+        margin-left: -175px;
+    }
+
+    #tableContainer{
+        top: 55%;
+    }
+    
+
+}
+
+@media (max-width:280px)  { /*mobile (galaxy fold)*/
+
+    #container{
+        width: 270px;
+        left: 50%;
+        margin-left: -135px;
+    }
+    
+    #tableContainer{
+        width: 260px;
+        height: 300px;
+        margin-left: -130px;
+        top: 55%;
+    }
+    
+}

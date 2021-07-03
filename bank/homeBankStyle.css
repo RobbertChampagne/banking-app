@@ -78,3 +78,37 @@ html{
     display: block;
     font-size: 14px;
 }
+
+
+@media (max-width:400px)  { /*mobile*/
+
+    #container{
+        width: 350px;
+        left: 50%;
+        margin-left: -175px;
+    }
+
+    #linkContainer p{
+        display: block;
+    }
+
+}
+
+@media (max-width:280px)  { /*mobile (galaxy fold)*/
+
+    #container{
+        width: 270px;
+        left: 50%;
+        margin-left: -135px;
+    }
+
+    #linkContainer{
+        width: 250px;
+    }
+    
+    #linkContainer p{
+        display: block;
+    }
+    
+    
+}

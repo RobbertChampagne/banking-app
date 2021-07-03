@@ -14,6 +14,13 @@ html{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+#backLink{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
 #loginContainer{
     width: 300px;
     height: 300px;
@@ -41,5 +48,48 @@ html{
     background-color: #325c5f;
     color: white;
     border: 1px solid black;
+    
+}
+
+/*bankClient/indexBankClient.php*/
+#or{
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+@media (max-width:400px)  { /*mobile*/
+
+    #container{
+        width: 350px;
+        left: 50%;
+        margin-left: -175px;
+    }
+
+}
+
+@media (max-width:280px)  { /*mobile (galaxy fold)*/
+
+    #container{
+        width: 270px;
+        left: 50%;
+        margin-left: -135px;
+    }
+
+    #loginContainer{
+        width: 200px;
+        left: 50%;
+        margin-left: -100px;
+        overflow-y: auto;
+    }
+    
+    #loginContainer input{
+        width: 200px;
+    }
+    
+    #loginContainer button{
+        width: 200px;
+    }
     
 }

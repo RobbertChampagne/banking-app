@@ -13,6 +13,10 @@
 <body>
     
     <div id="container">
+        <a id="backLink" href="..\index.php"> 
+            <img id="backImg" src="..\images\icons\logout.svg" alt="">
+        </a>
+
         <div id="loginContainer">
             <form id="form" action="indexBank.php" method="post">
                 <h2>Name</h2>

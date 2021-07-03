@@ -13,7 +13,7 @@
     <div id="container">
         <div id="buttonContainer">
             <button onclick="window.location.href='bank/indexBank.php';">Bank</button>
-            <button  onclick="window.location.href='indexClient.php';">Client</button>
+            <button onclick="window.location.href='bankClient/indexBankClient.php';">Client</button>
         </div>
     </div>
 

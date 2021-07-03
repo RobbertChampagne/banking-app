@@ -66,3 +66,50 @@ html{
     font-size: 15px;
 }
 
+
+
+@media (max-width:400px)  { /*mobile*/
+
+    #container{
+        width: 350px;
+        margin-left: -175px;
+    }
+
+    #loanTypeImg{
+        margin-left: 125px;
+    }
+    
+    #progressBar{
+        margin-left: 25px;
+    }
+    
+    #checkboxContainer{
+        margin-left: 6vw;
+    }
+
+}
+
+@media (max-width:280px)  { /*mobile (galaxy fold)*/
+
+    #container{
+        width: 270px;
+        left: 50%;
+        margin-left: -135px;
+    }
+    
+    #loanTypeImg{
+        margin-left: 85px;
+    }
+    
+    #progressBar{
+        width: 250px;
+        margin-left: 10px;
+    }
+    
+    #checkboxContainer{
+        margin-left: 3vw;
+    }
+    
+    
+    
+}

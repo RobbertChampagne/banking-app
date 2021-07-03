@@ -71,7 +71,7 @@ if(isset($_POST['loginbutton'])){
 
 //REGISTER USER
 if (isset($_POST['registerbutton'])) {
-    echo "ja";
+    echo "registered in";
 
     //FORM VALIDATION
     $name = filter_var($_POST['name'], FILTER_SANITIZE_SPECIAL_CHARS); //This filter is used to escape "<>& and characters with ASCII value below 32
@@ -136,7 +136,6 @@ if (isset($_POST['registerbutton'])) {
         }
 
         $result->close();
-
 
     }
 }

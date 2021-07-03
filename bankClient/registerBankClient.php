@@ -1,4 +1,3 @@
-
 <?php include('serverBankClient.php'); ?>
 
 <!DOCTYPE html>
@@ -39,19 +38,21 @@
                    
                 <h2>Email</h2>
                 <input name= "email" class="registerInputs" type="email" id="emailInput" placeholder="Enter your email" required >
+                
+                <input type="text" id="loanTypeValue" name="loanTypeValue" value="car">
                     
                 <br><br>
-                <button type="submit" name="registerButton">Register</button>
-
-                <input type="text" id="loanTypeValue" name="loanTypeValue" value="car">
+                <button type="submit" name="registerbutton" value="registerbutton">Register</button>
     
             </form>
             
         </div>
 
-        <?php include('..\error.php'); ?> <!--include errors page (shows errors)-->
 
     </div>
+
+    <?php include('..\error.php'); ?> <!--include errors page (shows errors)-->
+
 
 </body>
 </html>
